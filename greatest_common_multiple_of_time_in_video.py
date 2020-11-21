@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import math
 
@@ -62,20 +64,20 @@ def main ():
 
     for item in video_time_split:
         if not item.isdigit():
-            print "\nUsage: must provide colon <:> seperated integers"
+            print("\nUsage: must provide colon <:> seperated integers")
             sys.exit(1)
 
     video_time_int = video_time_calculation(video_time_split)
-    print "Total Video Time: " + str(video_time_int) + " Seconds"
+    print("Total Video Time: " + str(video_time_int) + " Seconds")
 
     divisible_by=divisible_by_calculation(video_time_int)
-    print "Divisible By: " + str(divisible_by)
+    print("Divisible By: " + str(divisible_by))
 
     combinations = int(math.pow(2, len(divisible_by)))-1
-    print "Combinations: " + str(combinations)
+    print("Combinations: " + str(combinations))
 
     closest_pair = closest_pair_calculation(combinations, divisible_by, video_time_int)
-    print "Greatest Common Multiple: " + str(closest_pair)
+    print("Greatest Common Multiple: " + str(closest_pair))
 
 if __name__ == "__main__":
     main()
