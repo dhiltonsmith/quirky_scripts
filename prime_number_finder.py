@@ -5,7 +5,7 @@ import math
 
 def PrimeNumberCheck(number_to_check):
 	for i in range(2,number_to_check):
-		# Checked every value up to the square root for divisibliity, exit loop.
+		# Checked every value up to the square root for divisiblity, exit loop.
 		if i * i > number_to_check:
 			return True
 		# If no remainder, then it's not prime, because it is divisible by a non zero and non-self.
